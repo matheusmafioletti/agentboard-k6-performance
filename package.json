@@ -1,0 +1,21 @@
+{
+  "name": "agentboard-k6-performance",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "smoke": "npm run build && k6 run dist/smoke.js",
+    "load": "npm run build && k6 run dist/load.js",
+    "stress": "npm run build && k6 run dist/stress.js",
+    "spike": "npm run build && k6 run dist/spike.js",
+    "soak": "npm run build && k6 run dist/soak.js",
+    "smoke:out": "npm run build && k6 run --out json=results/smoke.json dist/smoke.js"
+  },
+  "devDependencies": {
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.0",
+    "@types/k6": "^0.51.0",
+    "copy-webpack-plugin": "^12.0.2"
+  }
+}
