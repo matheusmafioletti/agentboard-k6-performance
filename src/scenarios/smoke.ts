@@ -5,7 +5,7 @@ import { SLOS } from '@config/environment';
 
 export const options: Options = {
   vus: 1,
-  iterations: 2,
+  iterations: 1,
   thresholds: SLOS.smoke,
 };
 

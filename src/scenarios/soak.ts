@@ -8,7 +8,7 @@ export const options: Options = {
     { duration: '30m', target: 30 },
     { duration: '2m', target: 0 },
   ],
-  thresholds: SLOS.load,
+  thresholds: SLOS.soak,
 };
 
 export default function (): void {

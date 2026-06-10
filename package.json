@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --config webpack.config.js",
+    "setup:user": "node scripts/setup-perf-user.mjs",
     "smoke": "npm run build && k6 run dist/smoke.js",
     "load": "npm run build && k6 run dist/load.js",
     "stress": "npm run build && k6 run dist/stress.js",
